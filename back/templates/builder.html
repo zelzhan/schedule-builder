@@ -15,6 +15,7 @@
       <ul class="nav flex-column" ng-repeat = "course in courses" >
                 <li class="nav-item" ng-repeat = "deffinition in deffinitions">
                   <a class="nav-link" href="#" data-toggle="tooltip" data-placement="right" title="||deffinition||" >||course|| <span class="sr-only">(current)</span>
+                    {{ form.link(class = 'btn btn-primary btn-lg')}}
                   </a>
                 </li>
 
