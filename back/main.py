@@ -11,13 +11,17 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-	return make_response(open('templates/welcome.html').read())
+	return render_template('welcome.html')
 
-class Builder(Resource):
-    def get(self):
-        return make_response(open('templates/layout.html').read())
+@app.route('/builder')
+def builder():
+	return render_template('builder.html')
+# class Builder(Resource):
+    # def get(self):
+    	# return render_template('builder.html')
+#        return make_response(open('templates/builder.html').read())
 
-api.add_resource(Builder, '/builder') # Route_1
+# api.add_resource(Builder, '/builder') # Route_1
 
 
 if __name__=='__main__':

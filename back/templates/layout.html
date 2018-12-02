@@ -19,31 +19,7 @@
 <body>
 
 
-  <table class="table">
-<thead>
-  <tr>
-    <th scope="col"></th>
-    <th scope="col">Monday</th>
-    <th scope="col">Tuesdat</th>
-    <th scope="col">Wednesday</th>
-    <th scope="col">Thursday</th>
-    <th scope="col">Friday</th>
-  </tr>
-</thead>
-<tbody>
-  <div -app='myApp' ng-controller="Main">
-    <tr ng-repeat = "n in range(9, 17)">
-      <th scope="row">Number {{n}}</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </div>
-</tbody>
-</table>
+  {% block content %}{% endblock %}
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

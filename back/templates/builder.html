@@ -1,0 +1,29 @@
+
+{% extends 'layout.html' %}
+{% block content %}
+<table class="table">
+<thead>
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">Monday</th>
+    <th scope="col">Tuesdat</th>
+    <th scope="col">Wednesday</th>
+    <th scope="col">Thursday</th>
+    <th scope="col">Friday</th>
+  </tr>
+</thead>
+<tbody>
+  <div -app='myApp' ng-controller="Main">
+    <tr ng-repeat = "n in range(9, 17)">
+      <th scope="row">Number </th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </div>
+</tbody>
+</table>
+{% endblock content %}
