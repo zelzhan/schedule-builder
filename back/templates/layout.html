@@ -14,36 +14,33 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,800" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+
+          <!-- <script src="{{ url_for('static', filename='main.js') }}"></script> -->
+        <script src="{{ url_for('static', filename='angular.min.js') }}"></script>
+
+        <script>
+            angular.module('courseApp', []).controller('courseCtrl', ['$scope', function($scope) {
+              $scope.records = ["9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00"]
+            }])
+            .config(function($interpolateProvider) {
+                $interpolateProvider.startSymbol('||').endSymbol('||');
+            });
+
+
+        </script>
+
     <title>NU Schedule Builder</title>
 </head>
 <body>
 
 
-  <table class="table">
-<thead>
-  <tr>
-    <th scope="col"></th>
-    <th scope="col">Monday</th>
-    <th scope="col">Tuesdat</th>
-    <th scope="col">Wednesday</th>
-    <th scope="col">Thursday</th>
-    <th scope="col">Friday</th>
-  </tr>
-</thead>
-<tbody>
-  <div -app='myApp' ng-controller="Main">
-    <tr ng-repeat = "n in range(9, 17)">
-      <th scope="row">Number {{n}}</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </div>
-</tbody>
-</table>
+  {% block content %}{% endblock %}
+
+  <footer class="footer container">
+    <div class="container">
+      <span class="text-muted">&copy; 2018 Depressed&Funny</span>
+    </div>
+  </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
