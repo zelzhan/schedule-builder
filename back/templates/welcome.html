@@ -1,20 +1,24 @@
 {% extends 'layout.html' %}
 {% block content %}
-	<div class="container page">
-		<div id="content" class="container main" ng-view>
+<div class="container page">
+  <div id="content" class="container main" ng-view>
 
-      <div class="jumbotron">
-        <h1 class="display-4">Welcome to NU Schedule Builder!</h1>
-        <p class="lead">This is a simple schedule builder for NU Students</p>
-        <hr class="my-4">
-        <p>You can upload your transcript or continue without it</p>
-        <p class="lead">
-          <a class="btn btn-primary btn-lg" href="#" role="button">Upload</a>
-          <a class="btn btn-primary btn-lg" href="#" role="button">Continue</a>
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to NU Schedule Builder!</h1>
+      <p class="lead">This is a simple schedule builder for NU Students</p>
+      <hr class="my-4">
+      <p>You can upload your transcript or continue without it</p>
+      <p class="lead">
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          <fieldset>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Upload</a>
+            {{ form.link(class = 'btn btn-primary btn-lg')}}
+          </fieldset>
+          <!-- <a class="btn btn-primary btn-lg" href="localhost:5000/builder" role="button">Continue</a> -->
         </p>
-      </div>
-		</div>
 
-		<hr>
-</div>
-{% endblock content %}
+
+        <hr>
+      </div>
+      {% endblock content %}
