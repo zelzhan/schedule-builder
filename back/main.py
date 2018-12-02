@@ -8,8 +8,11 @@ app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
  
 @app.route('/', methods=['GET', 'POST'])
 def index():
-	return "Hello world"
+	return render_template('home.html')
 
 	
 if __name__=='__main__':
     app.run(debug=True)
+
+
+
