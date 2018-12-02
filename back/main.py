@@ -30,7 +30,10 @@ def index():
 
 @app.route('/builder', methods=['GET', 'POST'])
 def builder():
-    return render_template('builder.html', data=data)
+	send = Button()
+	if send.validate_on_submit():
+		return redirect(url_for('builder', form = send))
+	return render_template('builder.html', data=data, form = send)
 
 
 

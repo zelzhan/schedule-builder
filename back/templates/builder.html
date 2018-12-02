@@ -8,8 +8,14 @@
   <nav class="col-md-2 d-none d-md-block bg-light sidebar" ng-init = 'courses = {{ data }}'>
     <div class="sidebar-sticky courses" ng-init='deffinitions = ["deffinition", "thats good math you know it is required for MATH people, not HSS so I dont think so that you will be able to take this course because you already got 3 priority thats sucks you know ahahaahah"]'>
       <ul class="nav flex-column" ng-repeat = "course in courses" >
+<<<<<<< HEAD
                 <li class="nav-item">
                   <a class="nav-link" href="#" data-toggle="tooltip" data-placement="right" title="Course Name: ||course[1]|| Credit: ||course[4]|| Time: ||course[6]||" >||course[0]|| ||course[2]|| <span class="sr-only">(current)</span>
+=======
+                <li class="nav-item" ng-repeat = "deffinition in deffinitions">
+                  <a class="nav-link" href="#" data-toggle="tooltip" data-placement="right" title="||deffinition||" >||course|| <span class="sr-only">(current)</span>
+                    {{ form.link(class = 'btn btn-primary btn-lg')}}
+>>>>>>> 7dfd9a622d367e6eac5476b23241b87ac7d42930
                   </a>
                 </li>
       </ul>
